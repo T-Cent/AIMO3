@@ -1,0 +1,134 @@
+problem,gold,raw_output
+"What set of points in the complex plane is determined by the condition
+
+$$
+-\frac{\pi}{2} \leqslant \arg (z+1-i) \leqslant \frac{3}{4} \pi ?
+$$","
+1. To find the set of points on the complex plane defined by the inequality
+
+$$
+- \frac{\pi}{2} \leqslant \arg (z+1-i) \leqslant \frac{3\pi}{4},
+$$
+
+we start by representing the complex number $z+1-i$.
+
+2. The complex number $z+1-i$ can be rewritten as:
+
+$$
+z + 1 - i = z - (-1 + i).
+$$
+
+This means $z$ is translated from the origin by the vector $(-1+i)$. 
+
+3. Consequently, $z+1-i$ is the position of $z$ relative to the point $-1+i$. 
+
+4. The argument of $z+1-i$, $\arg(z+1-i)$, represents the angle between the vector $(z - (-1+i))$ and the positive real axis of the complex plane.
+
+5. Given the condition:
+
+$$
+-\frac{\pi}{2} \leqslant \arg(z+1-i) \leqslant \frac{3\pi}{4},
+$$
+
+we recognize that these are the bounds for the permissible angles that the vector $(z - (-1+i))$ makes with the positive real axis.
+
+6. On the complex plane, the argument $\arg(z+1-i)$ describes the angle of the vector with respect to the point $-1+i$. Starting from the direction of the positive real axis:
+
+   - $\arg(z+1-i) = -\frac{\pi}{2}$ is a vector pointing straight downwards from $-1+i$.
+   - $\arg(z+1-i) = \frac{3\pi}{4}$ is a vector forming an angle of $\frac{3\pi}{4}$ radians (135 degrees), pointing in the North-West direction from $-1+i$.
+
+7. Thus, the inequality:
+
+$$
+- \frac{\pi}{2} \leqslant \arg(z+1-i) \leqslant \frac{3\pi}{4}
+$$
+
+describes all points $z$ on the complex plane that, when translated to $-1+i$, form an angle between $-\frac{\pi}{2}$ and $\frac{3\pi}{4}$ relative to the positive real axis.
+
+8. If we picture this, it represents a sector on the complex plane with vertex at $-1+i$, extending counter-clockwise from the negative imaginary axis (downwards) to an angle of $\frac{3\pi}{4}$ with the positive real axis.
+
+9. Consequently, the set of points $z$ satisfies the condition and forms a sector originating at $-1+i$ bounded by $-\frac{\pi}{2}$ and $\frac{3\pi}{4}$.
+
+### Conclusion:
+
+The set of points on the complex plane defined by the given inequality forms a sector with vertex at $-1+i$, bounded by the directions of $-\frac{\pi}{2}$ and $\frac{3\pi}{4}$ radians relative to the positive real axis.
+
+$$
+\boxed{}
+$$","We start by expressing the condition in terms of the real and imaginary parts of $z+1-i$.
+
+Let $z=x+iy$.  Then
+\[z+1-i = (x+1)+i(y-1).\]
+The argument of a complex number $a+bi$ satisfies
+\[\arg(a+bi)=\arctan\left(\frac{b}{a}\right).\]
+Hence
+\[\arg\bigl((x+1)+i(y-1)\bigr)=\arctan\bigl((y-1)/(x+1)\bigr).\]
+The original condition is
+\[-\frac{\pi}{2}\le\arctan\bigl((y-1)/(x+1)\bigr)\le\frac{3\pi}{4}.\]
+The arctangent function is strictly increasing on $(-\infty,+\infty)$, so the previous inequality is equivalent to
+\[-1\le\frac{y-1}{x+1}\le1.\]
+Multiplying by $x+1$ (which is positive because $x\ge-1$) gives
+\[-(x+1)\le y-1\le x+1.\]
+Adding $1$ to each part yields
+\[x\le y\le x+2.\]
+Thus the set of points $z=x+iy$ satisfies the required condition exactly when $x\le y\le x+2$.
+
+\boxed{y\ge x,\; y\le x+2}"
+" 
+Given a triangular pyramid, Alex wants to choose two of its skew edges and construct spheres on them as diameters. Is it always possible for him to choose such a pair such that any point of the pyramid lies in at least one of these spheres?","\text{Yes, he can always choose such a pair of edges, and hence any point in the pyramid will lie within at least one of the spheres.","We prove the statement by contradiction. Assume there exists a tetrahedron $ABCD$ such that for every pair of edges $AB$ and $CD$ (or any other pair) the spheres $S_{AB}$ and $S_{CD}$ do not cover the whole tetrahedron.
+
+Consider the plane $\pi$ that passes through the three vertices $A$, $B$, and $C$. This plane intersects the tetrahedron in a triangle $\triangle ABC$. Because $\pi$ is not parallel to the fourth edge $AD$, the intersection of $\pi$ with the tetrahedron is a triangle, not a line segment.
+
+Now look at the two spheres $S_{AB}$ and $S_{CD}$. Their centers lie on the line $l$ that is perpendicular to the plane $\pi$ and passes through the midpoint of $BC$. The spheres therefore lie on opposite sides of $\pi$.
+
+If a point $P$ of the tetrahedron lies outside both spheres, then $P$ must lie on the same side of $\pi$ as the sphere that does not contain $A$, $B$, or $C$. But $\triangle ABC$ lies on the opposite side of $\pi$, so $P$ cannot lie on the same side as $\triangle ABC$.
+
+Thus the assumption that there exists a point $P$ outside both spheres leads to a contradiction. Hence no such point exists, and every point of the tetrahedron lies in at least one of the two spheres.
+
+\boxed{1}"
+Let \( a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{2}x^{2} - x + 1 = 0 \) have \( n \) positive real roots. Prove that \( 0 < 2^{2}a_{2} + 2^{3}a_{3} + \cdots + 2^{n}a_{n} \leq \left( \frac{n-2}{n} \right)^{2} + 1 \).,0 < 2^2 a_2 + \cdots + 2^n a_n \leq \left( \frac{n-2,"We start by applying Descartes' rule of signs to the polynomial $P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x-a_n$.  The coefficient of $x$ is $-a_n<0$, so $P$ has exactly one sign change, from $+$ to $-$ at $x=0$.  Hence $P$ has exactly one positive root $r_1$.
+
+Consider the polynomial $Q(x)=a_nx^{n}+a_{n-1}x^{n-1}+\dots+a_2x^2-1$.  The coefficients of $Q$ are the same as those of $P$ except for the missing term $-x$.  Because $r_1$ is a root of $P$, we have $P(r_1)=0$, i.e.
+\[a_n r_1^{n}+a_{n-1} r_1^{n-1}+\dots+a_1 r_1 - a_n = 0.\]
+Rearranging gives
+\[a_n r_1^{n}+a_{n-1} r_1^{n-1}+\dots+a_2 r_1^2 = a_n.\tag{1}\]
+Now evaluate $Q(r_1)$:
+\[Q(r_1)=a_n r_1^{n}+a_{n-1} r_1^{n-1}+\dots+a_2 r_1^2 - 1 = a_n - 1.\]
+Since $r_1$ is a root of $P$, $r_1>0$, and because $Q$ has degree $n-1$, it can have at most $n-1$ positive roots.  The inequality $Q(r_1)>0$ shows that $r_1$ is not a root of $Q$, so $Q$ has at least one positive root $r_2$.  Repeating the argument we obtain a sequence of positive roots $r_1,r_2,\dots,r_n$.
+
+Using the monotonicity of the function $f(x)=\ln x$ we have
+\[\ln r_1+\ln r_2+\dots+\ln r_n = \ln (r_1 r_2 \dots r_n) = \ln a_n.\]
+Because $\ln x$ is convex on $(0"
+"Let \( n \) be a positive integer greater than 3, such that \((n, 3) = 1\). Find the value of \(\prod_{k=1}^{m}\left(1+2 \cos \frac{2 a_{k} \pi}{n}\right)\), where \(a_{1}, a_{2}, \cdots, a_{m}\) are all positive integers less than or equal to \( n \) that are relatively prime to \( n \).",1,"We use the identity
+\[\cos\theta+\cos(2\theta)=2\cos\theta\cos(2\theta).\]
+Applying it to each term of the product we obtain
+\[\prod_{k=1}^{m}\left(1+2\cos\frac{2a_k\pi}{n}\right)=\prod_{k=1}^{m}\left(1+\cos\frac{2a_k\pi}{n}+\cos\frac{4a_k\pi}{n}\right).\]
+Because each $a_k$ is a multiple of $2$, $\cos\frac{4a_k\pi}{n}=\cos\frac{2a_k\pi}{n}$.  Hence the product simplifies to
+\[\prod_{k=1}^{m}\left(1+2\cos\frac{2a_k\pi}{n}\right)=\prod_{k=1}^{m}\left(1+2\cos\frac{2a_k\pi}{n}+2\cos^2\frac{2a_k\pi}{n}\right).\]
+Using the identity $\cos^2\theta=\frac{1+\cos(2\theta)}{2}$ we get
+\[1+2\cos^2\frac{2a_k\pi}{n}=1+\cos\frac{4a_k\pi}{n}.\]
+Since $\cos\frac{4a_k\pi}{n}=\cos\frac{2a_k\pi}{n}$, the factor $1+2\cos^2\frac{2a_k\pi}{n}$ is simply $1+\cos\frac{2a_k\pi}{n}$.  Therefore the original product equals
+\[\prod_{k=1}^{m}\left(1+\cos\frac{2a_k\pi}{n}\right).\]
+Now we apply the same identity to each factor:
+\[1+\cos\frac{2a_k\pi}{n}=\cos^2\frac{a_k\pi}{n}.\]
+Thus the product becomes
+\[\prod_{k=1}^{m}\cos^2\frac{a_k\pi}{n}.\]
+Since the $a_k$ are all distinct residues modulo $n$, the angles $\frac{a_k\pi}{n}$ are all distinct and lie in the"
+"Let $F_{1}$ and $F_{2}$ be the left and right foci of the ellipse $E: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(a>b>0)$. A line passing through point $F_{1}$ intersects the ellipse $E$ at points $A$ and $B$ such that $\left|A F_{1}\right|=3\left|B F_{1}\right|$ and $\cos \angle A F_{2} B=\frac{3}{5}$, as shown in the figure. The line $y=\frac{1}{2} x$ intersects the ellipse $E$ at points $P$ and $Q$. Points $C$ and $D$ are other points on the ellipse $E$ distinct from $P$ and $Q$, and lines $P C$ and $Q D$ intersect at point $M$, and lines $P D$ and $Q C$ intersect at point $N$. Find the slope of the line $M N$.",-1,"We start by determining the coordinates of the foci $F_1$ and $F_2$.
+
+**Step 1 – Foci coordinates.**
+For an ellipse with semi-axes $a>b>0$, the foci are located at $(\pm c,0)$ where $c=\sqrt{a^2-b^2}$.  Hence
+\[F_1 = (-c,0),\qquad F_2 = (c,0).\]
+
+**Step 2 – Line $F_1 A B$ equation.**
+Let $A=(x_1,y_1)$ and $B=(x_2,y_2)$.  The line through $F_1$ and $A$ has slope
+\[m_{F_1 A}=\frac{y_1}{x_1+c}.\]
+Similarly, the line through $F_1$ and $B$ has slope
+\[m_{F_1 B}=\frac{y_2}{x_2+c}.\]
+Given $\left|AF_1\right|=3\left|BF_1\right|$, we have
+\[\frac{x_1+c}{y_1}=\frac{3}{\sqrt{1-m_{F_1 B}^2}}\quad\text{and}\quad\frac{x_2+c}{y_2}=\frac{1}{\sqrt{1-m_{F_1 B}^2}}.\]
+Using the angle condition $\cos\angle AF_2B=\frac{3}{5}$ and the fact that $\cos\angle AF_2B=\frac{b^2-x_1x_2}{a\sqrt{(x_1-x_2)^2+y_1y_2}}$, we obtain a system of equations that can be solved for $m_{F_1 B}$.
+
+**Step 3 – Line $y=\frac12 x$ intersection points.**
+The line $y=\frac12 x$ intersects the ellipse at $P$ and $Q$ with coordinates
+\[(x_P,y_P)=\left(\frac{2a^2}{a^2+b^2},\frac{a^2}{a^2+b^2}\right),\qquad (x_Q,y_Q)=\left(\frac{2a^2}{a^2+b^2},-\frac{a^2}{a^2+b^2"

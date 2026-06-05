@@ -1,0 +1,19 @@
+{
+  "base_model_name_or_path": "meta-llama/Llama-3.1-8B-Instruct",
+  "bias": "none",
+  "lora_alpha": 64,
+  "lora_dropout": 0.05,
+  "peft_type": "LORA",
+  "r": 32,
+  "target_modules": [
+    "down_proj",
+    "q_proj",
+    "k_proj",
+    "o_proj",
+    "gate_proj",
+    "v_proj",
+    "up_proj"
+  ],
+  "task_type": "CAUSAL_LM",
+  "use_dora": false
+}
