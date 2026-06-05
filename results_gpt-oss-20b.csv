@@ -1,0 +1,11 @@
+problem_idx,model,base_correct,facts_correct,hints_correct,hints_needed,combined_correct,combined_hints_needed
+0,gpt-oss-20b,False,False,False,0,False,0
+1,gpt-oss-20b,False,False,False,0,False,0
+2,gpt-oss-20b,False,False,False,0,False,0
+3,gpt-oss-20b,False,False,False,0,False,0
+4,gpt-oss-20b,False,False,False,0,False,0
+5,gpt-oss-20b,False,False,False,0,False,0
+6,gpt-oss-20b,False,False,False,0,False,0
+7,gpt-oss-20b,False,False,False,0,False,0
+8,gpt-oss-20b,False,False,False,0,False,0
+9,gpt-oss-20b,False,False,False,0,False,0
